@@ -1,0 +1,12 @@
+ChatBotUIT-master/model/model_embedding/model.safetensors
+ChatBotUIT-master/model/*.safetensors
+ChatBotUIT-master/chatbot-env/Lib/site-packages/torch/lib/torch_cpu.dll
+ChatBotUIT-master/chatbot-env/Lib/site-packages/torch/lib/dnnl.lib
+.env
+chatbot_frontend/.env
+chatbot_frontend/.env.local
+chatbot-env/
+chatbot_frontend/node_modules/
+chatbot_frontend/.next/
+*.log
+*.lock

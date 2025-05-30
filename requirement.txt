@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+datasets
+huggingface_hub
+transformers
+pandas
