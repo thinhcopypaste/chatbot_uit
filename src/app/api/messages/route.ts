@@ -13,8 +13,12 @@ export async function POST(req: NextRequest) {
   try {
     const { userId } = await auth();
 
+    // if (!userId) {
+    //   redirect("/login");
+    // }
+
     if (!userId) {
-      redirect("/login");
+      return NextResponse.redirect(new URL("/login", req.url));
     }
 
     const validatedMessage = promptMessageSchema.parse(message);
@@ -42,7 +46,7 @@ export async function POST(req: NextRequest) {
     console.log("user mess: ", userMessage)
     const messages = chat.messages.concat(userMessage);
     console.log(language)
-    const response = await fetch("http://127.0.0.1:8000/process", {
+    const response = await fetch("https://d512-113-163-71-53.ngrok-free.app", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messages, id: chat.id, language }),
