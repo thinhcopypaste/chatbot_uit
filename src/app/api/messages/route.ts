@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     const { userId } = await auth();
 
     if (!userId) {
-      redirect("/login");
+      redirect("chatbot-uit-nine.vercel.app/login");
     }
 
     const validatedMessage = promptMessageSchema.parse(message);
