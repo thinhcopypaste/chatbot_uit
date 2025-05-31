@@ -5,5 +5,5 @@
       "src": "chatbot_frontend/next.config.mjs",
       "use": "@vercel/next"
     }
-  ],
+  ]
 }
